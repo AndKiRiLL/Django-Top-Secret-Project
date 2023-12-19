@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Films</title>
+</head>
+<body>
+    {% for i in films %}
+    <hr>
+    <h2>{{ i.name }}</h2>
+    <p>{{ i.category }}</p>
+    <p>Дата выпуска: {{ i.date_create }}</p>
+    <p>Актёры: {{ i.actors }}</p>
+    <p>Дата показа: {{ i.date_visible }}</p>
+    <a href="{% url 'films_edit_choose' i.id %}">Редактировать</a>
+    <hr>
+    {% endfor %}
+</body>
+</html>

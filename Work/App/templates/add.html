@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Films Add</title>
+</head>
+<body>
+        <form method="POST">
+        {% csrf_token %}
+            <h2>Создать кино</h2>
+
+            <p>Название</p>
+            {{ form_add.name }}
+
+            <p>Категории</p>
+            {{ form_add.category }}
+
+            <p>Дата выпуска</p>
+            {{ form_add.date_create }}
+
+            <p>Актёры</p>
+            {{ form_add.actors }}
+
+            <p>Дата показа</p>
+            {{ form_add.date_visible }}<br>
+
+            <input style="margin-top: 25px;" type="submit" value="Создать">
+        </form>
+</body>
+</html>
